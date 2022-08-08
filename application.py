@@ -14,7 +14,9 @@ def hello():
     if image:
       path_to_save = os.path.join(application.config['UPLOAD_FOLDER'], image.filename)
       image.save(path_to_save)
-      return render_template("index.html", link = request.url + path_to_save)
+      #return render_template("index.html", link = request.url + path_to_save)
+      return request.url + path_to_save;
+
   else:
     return render_template("index.html", link = '')
 
