@@ -9,12 +9,18 @@
 <body>
   <h1>Model Deployment</h1>
   <p>
-    dự đoán giá xây phòng trọ
+    transfer image
   </p>
-  <form action="/" method = "POST">
-    <input type="text" name = "so_phong" placeholder="so phong can xay">  
-    <input type="submit">
+  <form action="/" method = "POST" enctype = "multipart/form-data">
+    <dl>
+      <p>
+        <input type="file" name = "file" class = "form-control" autocomplete="off" required>
+      </p>
+    </dl>
+    <p>
+      <input type="submit" value = "Submit" >
+    </p>
   </form>
-  <p>{{g}}</p>
+  <img src="{{link}}" alt="">
 </body>
 </html>
